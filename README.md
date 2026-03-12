@@ -62,6 +62,8 @@ Password: customer123
 ### Staff Dashboard
 ![Admin](screenshots/admin_dashboard.png)
 
+## Demo Video
+https://youtube.com/your-demo-video
 
 ## KichiHair, 2024
 

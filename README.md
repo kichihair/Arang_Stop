@@ -67,7 +67,6 @@ This project demonstrates my practical experience in full-stack web development,
 | JavaScript | Client-side functionality |
 | W3.CSS | Responsive interface styling |
 | FPDF | PDF receipt generation |
-| InfinityFree | Web hosting and deployment |
 
 ## Technical Skills Demonstrated
 

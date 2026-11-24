@@ -119,7 +119,7 @@ The following accounts are intended for demonstration purposes only.
 
 ## Demo Video
 
-[Watch System Demonstration](https://youtube.com/your-demo-video)
+[Watch System Demonstration](https://youtu.be/1sYS1XK15CY)
 
 ## Local Installation
 

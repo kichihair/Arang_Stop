@@ -11,14 +11,30 @@ $cart = $_SESSION['cart'] ?? []; // Retrieve cart data from session
     <title>Menu Ordering System</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-        .shop 
-		{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            padding: 10px;
-            margin: 0 auto;
-        }
+        .shop {
+    display: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: start;
+}
+
+.shop.active {
+    display: grid;
+}
+
+.item {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
 
         .item 
 		{
@@ -92,6 +108,12 @@ $cart = $_SESSION['cart'] ?? []; // Retrieve cart data from session
 		{
             background-color: #218838;
         }
+        
+        @media (max-width: 600px) {
+    .shop {
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 </head>
 <body>
@@ -102,7 +124,7 @@ $cart = $_SESSION['cart'] ?? []; // Retrieve cart data from session
     </div>
 
     <!-- Display Burger Menu -->
-    <div id="Burger" class="w3-container w3-border shop w3-center">
+    <div id="Burger" class="shop active">
         <?php
         $query = "SELECT * FROM menu WHERE category = 'Burger'";
         $result = mysqli_query($condb, $query);
@@ -126,7 +148,7 @@ $cart = $_SESSION['cart'] ?? []; // Retrieve cart data from session
     </div>
 
 	<!-- Display Drink Menu -->
-    <div id="Drink" class="w3-container w3-border shop w3-center">
+    <div id="Drink" class="shop">
         <?php
         $query = "SELECT * FROM menu WHERE category = 'Drink'";
         $result = mysqli_query($condb, $query);
@@ -150,7 +172,7 @@ $cart = $_SESSION['cart'] ?? []; // Retrieve cart data from session
     </div>
 	
 	<!-- Display Fries Menu -->
-    <div id="Fries" class="w3-container w3-border shop w3-center">
+    <div id="Fries" class="shop">
         <?php
         $query = "SELECT * FROM menu WHERE category = 'Fries'";
         $result = mysqli_query($condb, $query);
@@ -178,23 +200,21 @@ $cart = $_SESSION['cart'] ?? []; // Retrieve cart data from session
     <script>
         let cart = JSON.parse(localStorage.getItem("cart")) || {};
 
-        function opentab(evt, category)
-		{
-            var i, x, tablinks;
-            x = document.getElementsByClassName("shop");
-            for (i = 0; i < x.length; i++) 
-			{
-                x[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) 
-			{
-                tablinks[i].className = tablinks[i].className.replace(" w3-blue", "");
-            }
-            document.getElementById(category).style.display = "grid";
-            evt.currentTarget.className += " w3-blue";
-        }
+        function opentab(evt, category) {
+    const shops = document.querySelectorAll(".shop");
+    const tabs = document.querySelectorAll(".tablink");
 
+    shops.forEach(shop => {
+        shop.classList.remove("active");
+    });
+
+    tabs.forEach(tab => {
+        tab.classList.remove("w3-blue");
+    });
+
+    document.getElementById(category).classList.add("active");
+    evt.currentTarget.classList.add("w3-blue");
+}
         function updateOrder(menu_id, change) 
 		{
             const quantityElement = document.getElementById(`quantity_${menu_id}`);

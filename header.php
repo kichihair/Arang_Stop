@@ -21,7 +21,8 @@ session_start();
 # Link to Homepage
 echo "
 <div class='w3-bar w3-dark-grey w3-mobile'>
-<a href='index.php' class='w3-bar-item w3-button w3-mobile'>Menu</a>";
+<a href='index.php' class='w3-bar-item w3-button w3-mobile'>Menu</a>
+<a href='about.php' class='w3-bar-item w3-button w3-mobile'>About</a>";
 # check the existence of the customer email session (if logged in, then this session will have a value)
 if(empty($_SESSION["email"])) 
 {

@@ -37,7 +37,7 @@ This project demonstrates my practical experience in full-stack web development,
 - Add products to the shopping cart
 - Manage selected items and quantities
 - Select dine-in or pick-up options
-- Checkout and place orders
+- Check out and place orders
 
 ### Staff & Cashier Module
 
@@ -86,7 +86,7 @@ This project demonstrates my practical experience in full-stack web development,
 
 ### Food Menu
 
-![Food Menu](screenshots/homepage.png)
+![Food Menu](screenshots/menu.png)
 
 ### Shopping Cart
 
@@ -94,7 +94,11 @@ This project demonstrates my practical experience in full-stack web development,
 
 ### Staff Dashboard
 
-![Staff Dashboard](screenshots/admin_dashboard.png)
+![Staff Dashboard](screenshots/admin.png)
+
+### About Dashboard
+
+![Staff Dashboard](screenshots/about.png)
 
 ## Demo Accounts
 

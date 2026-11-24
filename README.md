@@ -97,37 +97,14 @@ This project demonstrates my practical experience in full-stack web development,
 
 ![Staff Dashboard](screenshots/admin_dashboard.png)
 
-## Demo Account
+## Demo Accounts
 
-The same demo account can be used to access both the Customer and Staff interfaces.
+The following accounts are intended for demonstration purposes only.
 
-| Login Details | Credentials |
-| --- | --- |
-| Username | customer |
-| Password | customer123 |
-| Accessible Modules | Customer & Staff |
-
-Visitors may also register a new account to explore the system.
-
-> **Note:** The current system shares authentication between customer and staff accounts without proper role-based access control. This is a known limitation, which is explained in the Known Limitations & Learning Outcomes section below.
-
-## Known Limitations & Learning Outcomes
-
-During the development of this project, I did not implement proper role-based access control (RBAC) to separate customer and staff permissions. As a result, registered customers may also be able to access staff functionality using their existing login credentials.
-
-After reviewing my implementation, I recognized that this was a security oversight on my part, as unauthorized users could potentially access restricted staff operations.
-
-This experience helped me understand the importance of:
-
-- Role-based access control (RBAC)
-- Proper authentication and authorization
-- Separation of user roles and permissions
-- Server-side access validation
-- Secure application development practices
-
-In future projects, I will prioritize implementing proper access control and permission validation to prevent unauthorized access to restricted functionality.
-
-As this was an academic project developed in 2024, it also serves as a reference for my learning progress and continuous improvement as a software developer.
+| Role | Username | Password |
+| --- | --- | --- |
+| Staff | admin | admin123 |
+| Customer | okay@gmail.com | okay123 |
 
 ## Demo Video
 
@@ -149,6 +126,21 @@ To run this project on your local machine:
 Example:
 
 `http://localhost/arang_stop/`
+
+## Known Limitations
+
+This project was originally developed in 2024 as part of an academic Web Application course and was later restored and redeployed for portfolio purposes.
+
+Unfortunately, some database structures were not fully preserved during the backup and storage process. As a result, the following features are currently unavailable in the live demo:
+
+- Staff Order History
+- Monthly and Annual Sales Analysis
+
+The original source code for these features is still included in the repository, but further database restoration and troubleshooting are required to make them fully functional again.
+
+This experience has helped me recognize the importance of proper database backups, version control, database documentation, and deployment practices.
+
+Moving forward, I aim to apply better project maintenance and backup practices to ensure that both source code and database structures are properly preserved.
 
 ## Future Improvements
 

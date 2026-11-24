@@ -92,13 +92,21 @@ This project demonstrates my practical experience in full-stack web development,
 
 ![Shopping Cart](screenshots/cart.png)
 
-### Staff Dashboard
+### Order Status
+
+![Staff Dashboard](screenshots/status.png)
+
+### About
+
+![Staff Dashboard](screenshots/about.png)
+
+### Admin Dashboard
 
 ![Staff Dashboard](screenshots/admin.png)
 
-### About Dashboard
+### Monthly and Annual Analysis
 
-![Staff Dashboard](screenshots/about.png)
+![Staff Dashboard](screenshots/analysis.png)
 
 ## Demo Accounts
 
